@@ -24,13 +24,13 @@ h1 {
   letter-spacing: 0.1rem;
   font-style: italic;
   color: #40b48e;
-  text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
+ 
   text-transform: uppercase;
   margin: 4rem 0;
 }
 
 .search-form {
-  width: 60rem;
+  width: 100%;
   height: 10rem;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ h1 {
   background-color: #d3d3d3;
   border-radius: 0.5rem;
   margin-bottom: 5rem;
-  box-shadow: 1rem 2rem 5rem #aaa;
+ 
   position: relative;
 }
 
@@ -100,7 +100,7 @@ h1 {
   padding: 2rem;
   position: relative;
   border-radius: 0.5rem;
-  box-shadow: 2rem 3rem 5rem #aaa;
+  
 }
 
 .recipe h2 {
@@ -122,9 +122,14 @@ h1 {
   object-fit: cover;
 }
 
-.recipe a {
+.recipe  {
   font-size: 1.8rem;
   color: #40b48e;
+}
+
+.recipe a {
+  font-size: 1.8rem;
+  color: white;
 }
 
 .recipe button {
@@ -156,4 +161,41 @@ h1 {
 .ingredient-weight {
   color: #40b48e;
   font-size: 1.3rem;
+}
+
+
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
 }

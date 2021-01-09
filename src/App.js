@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import Axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -38,11 +39,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App container container-fluid movie-app" >
+      
       <h1>Food Searching App</h1>
-      <form onSubmit={onSubmit} className="search-form">
+      <form onSubmit={onSubmit} className="search-form container">
         {alert !== "" && <Alert alert={alert} />}
         <input
+         className='form-control'
           type="text"
           name="query"
           onChange={onChange}
@@ -50,12 +53,13 @@ function App() {
           autoComplete="off"
           placeholder="Search Food"
         />
-        <input type="submit" value="Search" />
+        <input className='form-control' type="submit" value="Search" />
       </form>
       <div className="recipes">
         {recipes !== [] &&
           recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
       </div>
+      
     </div>
   );
 }
